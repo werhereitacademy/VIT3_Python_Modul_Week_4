@@ -6,6 +6,7 @@ cwd= os.getcwd()
 
 #dosya yolundaki ayirici karakter.
 path_separator = os.sep
+#altarnatif yol:
 #kitap_dosya_yolu = os.path.join(cwd, "kitap.json")
 kitap_dosya_yolu = cwd + path_separator + "kitap.json"
 kitap_dosyasi_mevcut = os.path.isfile(kitap_dosya_yolu)
@@ -23,17 +24,17 @@ def oku():
             json.dump(kitaplar, dosya)
             return kitaplar
     
-#print(oku())
+
 
 def toplam_kitap_sayisi():
     kitaplar = oku()
     return len(kitaplar)
-#print(toplam_kitap_sayisi())
+
 
 def kayit(veri):
 
     with open(kitap_dosya_yolu, "w") as dosya:
-        json.dump(veri, dosya)
+        json.dump(veri, dosya, indent=2)
         
 def kitap_ekle(barkod, kitap_adi, yayinevi, dil, fiyat, yazar):
     eklenecek_kitap = {
@@ -67,7 +68,7 @@ def kitap_ara(barkod):
         if kitap["Barkod"] == barkod:
             return kitap
     return None
-#print(kitap_ara())
+
 
 
 def kitap_guncelle(barkod, yeni_kitap_adi, yeni_yayinevi, yeni_dil, yeni_fiyat, yeni_yazar):
@@ -85,6 +86,3 @@ def kitap_guncelle(barkod, yeni_kitap_adi, yeni_yayinevi, yeni_dil, yeni_fiyat, 
         guncellenecek_kitap["Yazar"] = yeni_yazar
         kayit(kitaplar)
         
-#print(kitap_ara(9786057003768))
-#kitap_guncelle(9786057003768, "Kurtulus Kopegi", "Kurtulus Kopegi yayinevi", "Türkce", 50, "Kurtulus Kopegi")
-#print(kitap_ara(9786057003768))
