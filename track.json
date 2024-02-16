@@ -1,0 +1,19 @@
+[
+    {
+        "Member": {
+            "id": 1,
+            "Member name": "Furkan",
+            "Tel": "06897548",
+            "Address": "Groningen"
+        },
+        "Book": {
+            "Barkod": "deneme2",
+            "Dil": "deneme2",
+            "Kitap_Adi": "deneme2",
+            "Yayinevi": "deneme2",
+            "Yazar": ""
+        },
+        "borrow_date": "2024-02-16",
+        "return_date": "2024-03-01"
+    }
+]
