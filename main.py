@@ -14,7 +14,8 @@ def check_file(file_path):  # Checking whether the file exists in the file path
         if os.path.exists(file_path):
             return True
         else:
-            raise FileNotFoundError('There is no file to read!')
+            return False
+            #   raise FileNotFoundError('There is no file to read!')
     except FileNotFoundError:
         raise
 
@@ -26,7 +27,7 @@ def read_from_json(file_path):
             return a_list
 
 
-def write2json(file_path, a_list):
+def write_to_json(file_path, a_list):
     with open(file_path, 'w') as fp:
         json.dump(a_list, fp)
     return a_list
@@ -73,7 +74,7 @@ if __name__ == '__main__':
                     elif activity == '2':
                         book_list = read_from_json(book_file_path)  # Fetch list from the file
                         book_list = bt.add_book(book_file_path, book_list)  # Send the list for adding process
-                        write2json(book_file_path, book_list)  # Write the updated list to the file
+                        write_to_json(book_file_path, book_list)  # Write the updated list to the file
                         input('Press an any key to continue...')
 
                     # Search a book in the library
@@ -102,7 +103,7 @@ if __name__ == '__main__':
                             barcode = int(input('Enter the "Barcode Number" of the book that you want to'
                                                 ' remove from library\n::::'))
                             book_list, deleted = bt.remove_book(book_list, barcode=barcode)
-                            write2json(book_file_path, book_list)
+                            write_to_json(book_file_path, book_list)
                             print('Deleted book is :\n', deleted)
 
                         elif decision == '2':  # Removing via "Book Name" code
@@ -111,7 +112,7 @@ if __name__ == '__main__':
                             book_list, deleted = bt.remove_book(book_list, bookname=name)
                             des2 = input(f'Book to delete:\n{deleted}\n Are you sure to delete? Press Y/N? : ')
                             if des2.lower() == 'y':
-                                write2json(book_file_path, book_list)
+                                write_to_json(book_file_path, book_list)
                                 print('Deleted book is :\n', deleted)
                             else:
                                 print('The relevant book was not deleted...')
