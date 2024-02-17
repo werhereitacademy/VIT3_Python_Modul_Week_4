@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "Member name": "Furkan",
+        "Tel": "06897548",
+        "Address": "Groningen"
+    },
+    {
+        "id": 2,
+        "Member name": "Emre",
+        "Tel": "09845687",
+        "Address": "Istanbul"
+    }
+]
