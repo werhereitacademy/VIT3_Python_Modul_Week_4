@@ -33,4 +33,74 @@ def add_member():
     save_members(members)
     print("Member added successfully.")
 
-# Define other member functions: delete_member, search_member, update_member, member_menu, etc.
+def delete_member():
+    members = load_members()
+    id = input("Enter the ID of the member to delete: ")
+
+    for member in members:
+        if member["id"] == id:
+            members.remove(member)
+            save_members(members)
+            print("Member deleted successfully.")
+            return
+
+    print("Member not found.")
+
+def search_member():
+    members = load_members()
+    id = input("Enter the ID of the member to search: ")
+
+    for member in members:
+        if member["id"] == id:
+            print("Member found:")
+            print(member)
+            return
+
+    print("Member not found.")
+
+def update_member():
+    members = load_members()
+    id = input("Enter the ID of the member to update: ")
+
+    for member in members:
+        if member["id"] == id:
+            print("Enter new information (leave blank to keep unchanged):")
+            member_name = input("Enter the new member name: ")
+            if member_name:
+                member["member_name"] = member_name
+            tel = input("Enter the new telephone number: ")
+            if tel:
+                member["tel"] = tel
+            address = input("Enter the new address: ")
+            if address:
+                member["address"] = address
+
+            save_members(members)
+            print("Member updated successfully.")
+            return
+
+    print("Member not found.")
+
+def member_menu():
+    while True:
+        print("\nMember Transactions Menu:")
+        print("1. Add Member")
+        print("2. Delete Member")
+        print("3. Search Member")
+        print("4. Update Member")
+        print("5. Return to Main Menu")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            add_member()
+        elif choice == "2":
+            delete_member()
+        elif choice == "3":
+            search_member()
+        elif choice == "4":
+            update_member()
+        elif choice == "5":
+            print("Returning to main menu...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
