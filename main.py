@@ -2,7 +2,6 @@
 
 import book_transactions
 import member_transactions
-import time
 
 def main():
     print("Welcome to the Library Management System!")
@@ -24,4 +23,5 @@ def main():
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
+    main()
     main()
