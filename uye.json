@@ -1,0 +1,194 @@
+[
+   {
+      "id": 1234444444,
+      "Uye Adi": "Ahmet Yilmaz",
+      "Tel": "555-123-4567",
+      "Adres": "Örnek Sokak, Örnek Mahalle, İstanbul, 34000"
+   },
+   {
+      "id": 255554355555,
+      "Uye Adi": "Mehmet Kara",
+      "Tel": "555-234-5678",
+      "Adres": "Başka Sokak, Başka Mahalle, Ankara, 06000"
+   },
+   {
+      "id": 333333334455,
+      "Uye Adi": "Ayşe Demir",
+      "Tel": "555-345-6789",
+      "Adres": "Başka Bir Sokak, Başka Bir Mahalle, İzmir, 35000"
+   },
+   {
+      "id": 24453354656776,
+      "Uye Adi": "Fatma Kizil",
+      "Tel": "555-456-7890",
+      "Adres": "Başka Sokak 2, Başka Mahalle 2, Bursa, 16000"
+   },
+   {
+      "id": 33243355334,
+      "Uye Adi": "Huseyin Beyaz",
+      "Tel": "555-567-8901",
+      "Adres": "Başka Sokak 3, Başka Mahalle 3, Antalya, 07000"
+   },
+   {
+      "id": 34535353467,
+      "Uye Adi": "Zeynep Yeşil",
+      "Tel": "555-678-9012",
+      "Adres": "Başka Sokak 4, Başka Mahalle 4, Adana, 01000"
+   },
+   {
+      "id": 69096543476867,
+      "Uye Adi": "Ali Karan",
+      "Tel": "555-789-0123",
+      "Adres": "Başka Sokak 5, Başka Mahalle 5, Trabzon, 29000"
+   },
+   {
+      "id": 65767978965,
+      "Uye Adi": "Meryem Mavi",
+      "Tel": "555-890-1234",
+      "Adres": "Başka Sokak 6, Başka Mahalle 6, Eskişehir, 26000"
+   },
+   {
+      "id": 5754635646,
+      "Uye Adi": "Mustafa Kirmizi",
+      "Tel": "555-901-2345",
+      "Adres": "Başka Sokak 7, Başka Mahalle 7, Mersin, 33000"
+   },
+   {
+      "id": 986567545356,
+      "Uye Adi": "Gizem Turuncu",
+      "Tel": "555-012-3456",
+      "Adres": "Başka Sokak 8, Başka Mahalle 8, Gaziantep, 27000"
+   },
+   {
+      "id": 56543456765,
+      "Uye Adi": "Oğuzhan Kahverengi",
+      "Tel": "555-123-4567",
+      "Adres": "Başka Sokak 9, Başka Mahalle 9, Konya, 42000"
+   },
+   {
+      "id": 123456876578465,
+      "Uye Adi": "Can Yeşil",
+      "Tel": "555-345-6789",
+      "Adres": "Başka Sokak 11, Başka Mahalle 11, Diyarbakir, 21000"
+   },
+   {
+      "id": 10987654766,
+      "Uye Adi": "Elif Ak",
+      "Tel": "555-456-7890",
+      "Adres": "Başka Sokak 12, Başka Mahalle 12, Van, 65000"
+   },
+   {
+      "id": 124565456534,
+      "Uye Adi": "Tolga Karacaoğlan",
+      "Tel": "555-567-8901",
+      "Adres": "Başka Sokak 13, Başka Mahalle 13, Erzurum, 25000"
+   },
+   {
+      "id": 1434565435,
+      "Uye Adi": "Emine Karamizrak",
+      "Tel": "555-678-9012",
+      "Adres": "Başka Sokak 14, Başka Mahalle 14, Aydin, 09000"
+   },
+   {
+      "id": 9876534562345,
+      "Uye Adi": "Serkan GUneş",
+      "Tel": "555-789-0123",
+      "Adres": "Başka Sokak 15, Başka Mahalle 15, Kahramanmaraş, 46000"
+   },
+   {
+      "id": 123465432345678,
+      "Uye Adi": "Sibel Ay",
+      "Tel": "555-890-1234",
+      "Adres": "Başka Sokak 16, Başka Mahalle 16, Çanakkale, 17000"
+   },
+   {
+      "id": 19875645356776,
+      "Uye Adi": "Bilal Alp",
+      "Tel": "555-901-2345",
+      "Adres": "Başka Sokak 17, Başka Mahalle 17, KUtahya, 43000"
+   },
+   {
+      "id": 20987655465465,
+      "Uye Adi": "Nurcan Yaşar",
+      "Tel": "555-012-3456",
+      "Adres": "Başka Sokak 18, Başka Mahalle 18, Aksaray, 68000"
+   },
+   {
+      "id": 765657874563,
+      "Uye Adi": "Deniz Kara",
+      "Tel": "555-123-7890",
+      "Adres": "Deniz Sokak, Deniz Mahalle, İzmir, 35000"
+   },
+   {
+      "id": 2676464343,
+      "Uye Adi": "Burak GUneş",
+      "Tel": "555-234-5678",
+      "Adres": "GUneş Sokak, GUneş Mahalle, Ankara, 06000"
+   },
+   {
+      "id": 9877654674565,
+      "Uye Adi": "Ali Demir",
+      "Tel": "555-456-7890",
+      "Adres": "Demir Sokak, Demir Mahalle, Bursa, 16000"
+   },
+   {
+      "id": 765456545654,
+      "Uye Adi": "Zeynep Kizil",
+      "Tel": "555-567-8901",
+      "Adres": "Kizil Sokak, Kizil Mahalle, Antalya, 07000"
+   },
+   {
+      "id": 223456546765,
+      "Uye Adi": "Mehmet Demir",
+      "Tel": "555-345-6789",
+      "Adres": "Başka Bir Sokak, Başka Bir Mahalle, İzmir, 35000"
+   },
+   {
+      "id": 1440987678767,
+      "Uye Adi": "Ahmet Altan",
+      "Tel": "545 493 455",
+      "Adres": "Sapotlaan sokak,45 amsterdam"
+   },
+   {
+      "id": 14568575995946,
+      "Uye Adi": "Selami Sahin",
+      "Tel": "546 987234",
+      "Adres": "kelam sokak 34 Konya"
+   },
+   {
+      "id": 12409293438,
+      "Uye Adi": "Ahmet Altanogullari",
+      "Tel": "234 567 889",
+      "Adres": "jsdcs dsnfkdn  istanbul"
+   },
+   {
+      "id": 198234261954,
+      "Uye Adi": "Sacide Yalcin",
+      "Tel": "656 567677",
+      "Adres": "kalender sokak,78  hollanda"
+   },
+   {
+      "id": 985702936598506,
+      "Uye Adi": "Naim Ucak",
+      "Tel": "06 84593027",
+      "Adres": "Sporth 23 7674jx ,Vrijhoud"
+   },
+   {
+      "id": 98435496359843,
+      "Uye Adi": "Ahmet Rasim",
+      "Tel": "544 7869090",
+      "Adres": "Ankara"
+   },
+   {
+      "id": 234534956889,
+      "Uye Adi": "Ayse Fatma",
+      "Tel": "5447364555",
+      "Adres": "Afrika"
+   },
+   {
+      "id": "dd69040",
+      "Uye Adi": "Jhon Wick",
+      "Tel": "3456765456",
+      "Adres": "fransa"
+   }
+]
