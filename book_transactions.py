@@ -47,7 +47,7 @@ def add_book(file_path):
     publisher = input('Enter Publisher: ')
     writer = input('Enter Writer:')
     if main.check_file(file_path):
-        booklist = main.read_from_json(file_path)   # Fetch list from the file
+        booklist = main.read_from_json(file_path)  # Fetch list from the file
     a_book = {
         'Barkod': barcode,
         'Kitap_Adi': book_name,
@@ -60,7 +60,7 @@ def add_book(file_path):
 
 
 def search_book(file_path, data=''):
-    result = False, 'No book matched with your search!' #result = None
+    result = False, 'No book matched with your search!'  # result = None
     searched_books = []
     if main.check_file(file_path):
         booklist = main.read_from_json(file_path)
@@ -102,7 +102,7 @@ def search_book(file_path, data=''):
     #     print('Books data file doesn\'t exist!!!')
 
 
-def remove_book(file_path, data=''): #remove_book(booklist, barcode=-1, bookname=''):
+def remove_book(file_path, data=''):  # remove_book(booklist, barcode=-1, bookname=''):
     if main.check_file(file_path):
         booklist = main.read_from_json(file_path)
         for book1 in booklist:
@@ -133,6 +133,22 @@ def remove_book(file_path, data=''): #remove_book(booklist, barcode=-1, bookname
     #             return booklist, book
     #     else:
     #         print('There is no book registered with this "Book Name" in the library')
+
+
+def update_book(file_path, data, user_id):
+    if main.check_file(file_path):
+        booklist = main.read_from_json(file_path)
+        for book1 in booklist:
+            if int(data) == book1['Barkod']:
+                book1['Kira_Durumu'] = user_id
+                result = True, 'Borrowed user id added to book list file successfully '
+                break
+            else:
+                result = False, 'The book couldn\'t be found!'
+        main.write_to_json(file_path, booklist)
+        return result
+    else:
+        return False, 'Books data file doesn\'t exist!!!'
 
 
 if __name__ == '__main__':
@@ -181,7 +197,7 @@ if __name__ == '__main__':
                                  'Hint: Enter correct and full name of book or correct Barcode number:  \n')
             result, deleted_book = remove_book(book_file_path, deleted_book)
             if result:
-                print('The book is successfully deletedfrom book list.\n'
+                print('The book is successfully deleted from book list.\n'
                       f'Deleted book: {deleted_book['Kitap_Adi']}')
             else:
                 print(deleted_book)

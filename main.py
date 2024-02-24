@@ -62,6 +62,7 @@ if __name__ == '__main__':
             if activity == '1':
 
                 while activity != 9:
+
                     activity = ut.splash_screen()
 
                     # List all users information
@@ -136,7 +137,8 @@ if __name__ == '__main__':
                         print('Searching a user in the library user list\n'
                               '-----------------------------------------\n')
                         if check_file(user_file_path):
-                            the_user_name = input('Type the name of the user you want to get information about him/her: ')
+                            the_user_name = input(
+                                'Type the name of the user you want to get information about him/her: ')
                             result, the_user_list = ut.search_user(user_file_path, the_user_name)
                             if result:
                                 print('Found user(s) information:\n'
@@ -177,7 +179,8 @@ if __name__ == '__main__':
                                 result, deleted_user = ut.delete_user(user_file_path, the_id)
 
                                 if result:
-                                    print(f'The user; {deleted_user['full_name']} is successfully deleted from the user list!')
+                                    print(
+                                        f'The user; {deleted_user['full_name']} is successfully deleted from the user list!')
                                 else:
                                     print('The user doesn\'t exist that you want to delete!')
                             else:
@@ -193,7 +196,7 @@ if __name__ == '__main__':
                         lent_book = input('Which book you want to lend?: ')
                         result, lent_book = bt.book_info(book_file_path, lent_book)
                         if result:
-                            if len(lent_book) == 4 or len(lent_book) == 6:
+                            if len(lent_book) == 5 or len(lent_book) == 7:
                                 print(f'The book is {lent_book['Kitap_Adi']}')
                             else:  # len(lent_book) > 1:
                                 print('Too many book is chosen, please retype book info:')
@@ -210,9 +213,16 @@ if __name__ == '__main__':
                                 print(f'The user is {lend2user[0]['full_name']}')
                                 result, lent_process_dict = ut.lend_book(follow_file_path, lent_book, lend2user)
                                 if result:
-                                    print(f'"{lent_process_dict['book']['Kitap_Adi']}" is registered to '
-                                          f'"{lent_process_dict['user']['full_name']}" at {lent_process_dict['lend_date']}\n'
-                                          f'The book return date: {lent_process_dict['return_date']}')
+                                    result, reason = bt.update_book(book_file_path, lent_process_dict['book']['Barkod'],
+                                                                    lent_process_dict['user']['id'])
+                                    if result:
+                                        print(f'"{lent_process_dict['book']['Kitap_Adi']}" is registered to '
+                                              f'"{lent_process_dict['user']['full_name']}" at {lent_process_dict['lend_date']}\n'
+                                              f'The book return date: {lent_process_dict['return_date']}')
+                                    else:
+                                        print(reason)
+                                else:
+                                    print(lent_process_dict)
                             else:
                                 print('Too many user is chosen, please retype user info again:')
                                 break
@@ -222,14 +232,25 @@ if __name__ == '__main__':
                     # Returning a book
                     elif activity == '7':
                         print('Returning a book from a user\n'
-                              '------------------------\n')
-                        print('It is still under coding...')
+                              '----------------------------\n')
+                        returned_book = input('Enter the "full name of the book" or "barcode number":  ')
+                        result, returned_book = ut.return_book(book_file_path, returned_book)
+
+                        if result:
+                            print(
+                                f'The book: "{returned_book['book']['Kitap_Adi']}" has successfully been unregistered '
+                                f'from the user: "{returned_book['user']['full_name']}"...')
+                        else:
+                            print('Failed:', returned_book)
+
+                        input('Press the Enter key to continue...')
 
                     # Tracking the books
                     elif activity == '8':
                         print('Tracking the books\n'
                               '------------------\n')
-                        print('It is still under coding...')
+                        ut.track_book(follow_file_path)
+                        input('Press the Enter key to continue...')
 
                     # Return back to main screen
                     elif activity == '9':
@@ -286,7 +307,7 @@ if __name__ == '__main__':
                                              'Hint: Enter correct and full name of book or correct Barcode number:  \n')
                         result, deleted_book = bt.remove_book(book_file_path, deleted_book)
                         if result:
-                            print('The book is successfully deletedfrom book list.\n'
+                            print('The book is successfully deleted from book list.\n'
                                   f'Deleted book: {deleted_book['Kitap_Adi']}')
                         else:
                             print(deleted_book)
