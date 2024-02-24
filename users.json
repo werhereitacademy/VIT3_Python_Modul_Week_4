@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "full_name": "Fatih",
+        "phone": "123456",
+        "address": "Amsterdam"
+    },
+    {
+        "id": 2,
+        "full_name": "Kerim Bal",
+        "phone": "6789012",
+        "address": "Leiden"
+    },
+    {
+        "id": 3,
+        "full_name": "Fatma Bel",
+        "phone": "456789",
+        "address": "Den Haag"
+    }
+]
